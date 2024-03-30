@@ -24,8 +24,8 @@ document.getElementById("user-form").addEventListener("submit", function(event) 
     <p><strong>Skills:</strong> ${skills}</p>
   `;
   document.getElementById("user-details").appendChild(userDetails);
-  document.getElementById("user-form").reset(); // Reset form fields
+  document.getElementById("user-form").reset();
 
-  // Scroll to the bottom to show the latest user details
+  
   userDetails.scrollIntoView({ behavior: "smooth" });
 });
