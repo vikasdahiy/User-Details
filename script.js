@@ -10,17 +10,22 @@ document.getElementById("user-form").addEventListener("submit", function(event) 
   var languages = document.getElementById("languages").value;
   var skills = document.getElementById("skills").value;
 
-  document.getElementById("fullname-display").textContent = "Full Name: " + fullname;
-  document.getElementById("gender-display").textContent = "Gender: " + gender;
-  document.getElementById("age-display").textContent = "Age: " + age;
-  document.getElementById("email-display").textContent = "Email: " + email;
-  document.getElementById("country-display").textContent = "Country: " + country;
-  document.getElementById("education-display").textContent = "Education: " + education;
-  document.getElementById("interests-display").textContent = "Interests: " + interests;
-  document.getElementById("languages-display").textContent = "Languages: " + languages;
-  document.getElementById("skills-display").textContent = "Skills: " + skills;
+  var userDetails = document.createElement("div");
+  userDetails.classList.add("user-details");
+  userDetails.innerHTML = `
+    <p><strong>Full Name:</strong> ${fullname}</p>
+    <p><strong>Gender:</strong> ${gender}</p>
+    <p><strong>Age:</strong> ${age}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Country:</strong> ${country}</p>
+    <p><strong>Education:</strong> ${education}</p>
+    <p><strong>Interests:</strong> ${interests}</p>
+    <p><strong>Languages:</strong> ${languages}</p>
+    <p><strong>Skills:</strong> ${skills}</p>
+  `;
+  document.getElementById("user-details").appendChild(userDetails);
+  document.getElementById("user-form").reset(); // Reset form fields
 
-  // Hide registration card and show user details card
-  document.getElementById("registration-card").classList.add("hidden");
-  document.getElementById("user-details-card").classList.remove("hidden");
+  // Scroll to the bottom to show the latest user details
+  userDetails.scrollIntoView({ behavior: "smooth" });
 });
