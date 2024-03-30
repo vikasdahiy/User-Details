@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card" id="registration-card">
+      <h2>Registration Form</h2>
+      <form id="user-form">
+        <input type="text" id="fullname" placeholder="Full Name" required><br>
+        <select id="gender" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select><br>
+        <input type="text" id="age" placeholder="Age" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="text" id="country" placeholder="Country" required><br>
+        <input type="text" id="education" placeholder="Education" required><br>
+        <input type="text" id="interests" placeholder="Interests" required><br>
+        <input type="text" id="languages" placeholder="Languages" required><br>
+        <input type="text" id="skills" placeholder="Skills" required><br>
+        <input type="submit" value="Register">
+      </form>
+    </div>
+
+    <div class="card hidden" id="user-details-card">
+      <h2>User Details</h2>
+      <p id="fullname-display"></p>
+      <p id="gender-display"></p>
+      <p id="age-display"></p>
+      <p id="email-display"></p>
+      <p id="country-display"></p>
+      <p id="education-display"></p>
+      <p id="interests-display"></p>
+      <p id="languages-display"></p>
+      <p id="skills-display"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
